@@ -1,0 +1,177 @@
+/* ÉBÈNE IMMOBILIER — site de démonstration (WEHEM) */
+:root{
+  --vert:#0e2a21; --vert-2:#14382c; --or:#c9a227; --or-clair:#e8cf7a;
+  --creme:#f7f4ec; --blanc:#ffffff; --encre:#1c1c1c; --gris:#67707a;
+  --bord:#e7e2d4; --ombre:0 18px 45px rgba(14,42,33,.12);
+  --rayon:14px; --font-titre:'Playfair Display',Georgia,serif; --font-texte:'Inter',system-ui,sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--font-texte);color:var(--encre);background:var(--blanc);line-height:1.65;font-size:16px}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.container{width:min(1180px,92%);margin:0 auto}
+h1,h2,h3{font-family:var(--font-titre);line-height:1.2;color:var(--vert)}
+.section{padding:84px 0}
+.section--creme{background:var(--creme)}
+.kicker{display:inline-block;text-transform:uppercase;letter-spacing:.22em;font-size:.75rem;color:var(--or);font-weight:700;margin-bottom:12px}
+.titre-section{font-size:clamp(1.7rem,3.4vw,2.6rem);margin-bottom:14px}
+.sous-titre{color:var(--gris);max-width:640px;margin-bottom:40px}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:14px 30px;border-radius:999px;font-weight:600;border:none;cursor:pointer;transition:.25s;font-size:.95rem}
+.btn--or{background:var(--or);color:#1c1c1c}
+.btn--or:hover{background:var(--or-clair);transform:translateY(-2px)}
+.btn--vert{background:var(--vert);color:#fff}
+.btn--vert:hover{background:var(--vert-2);transform:translateY(-2px)}
+.btn--ghost{border:1.5px solid var(--vert);color:var(--vert);background:transparent}
+.btn--ghost:hover{background:var(--vert);color:#fff}
+
+/* ---------- Header ---------- */
+.header{position:fixed;inset:0 0 auto 0;z-index:50;transition:.3s;padding:18px 0}
+.header .container{display:flex;align-items:center;justify-content:space-between}
+.header--scrolled{background:rgba(255,255,255,.96);backdrop-filter:blur(10px);box-shadow:0 4px 24px rgba(0,0,0,.08);padding:12px 0}
+.logo{font-family:var(--font-titre);font-size:1.5rem;color:#fff;letter-spacing:.06em}
+.logo span{color:var(--or)}
+.header--scrolled .logo{color:var(--vert)}
+.nav{display:flex;gap:34px;align-items:center}
+.nav a{color:#fff;font-weight:500;font-size:.95rem;position:relative}
+.header--scrolled .nav a{color:var(--vert)}
+.nav a::after{content:"";position:absolute;left:0;bottom:-6px;width:0;height:2px;background:var(--or);transition:.25s}
+.nav a:hover::after,.nav a.actif::after{width:100%}
+.header-cta{display:flex;gap:12px;align-items:center}
+.burger{display:none;background:none;border:none;cursor:pointer;flex-direction:column;gap:5px;padding:6px}
+.burger span{width:26px;height:2.5px;background:#fff;border-radius:2px;transition:.3s}
+.header--scrolled .burger span{background:var(--vert)}
+
+/* ---------- Hero ---------- */
+.hero{min-height:96vh;display:flex;align-items:center;position:relative;color:#fff;
+  background:linear-gradient(rgba(10,25,20,.62),rgba(10,25,20,.45)),url('images/hero-villa.jpg') center/cover}
+.hero-contenu{padding-top:90px;max-width:820px}
+.hero h1{color:#fff;font-size:clamp(2.4rem,5.5vw,4.2rem);margin-bottom:18px}
+.hero h1 em{color:var(--or-clair);font-style:normal}
+.hero p{font-size:1.12rem;opacity:.92;margin-bottom:36px;max-width:620px}
+.recherche{background:rgba(255,255,255,.97);border-radius:var(--rayon);padding:10px;display:grid;
+  grid-template-columns:repeat(4,1fr) auto;gap:8px;box-shadow:var(--ombre);max-width:900px}
+.recherche select,.recherche input{border:none;background:transparent;padding:14px 12px;font-size:.92rem;color:var(--encre);width:100%;outline:none}
+.recherche .champ{border-right:1px solid var(--bord)}
+.recherche .champ:last-of-type{border-right:none}
+.hero-stats{display:flex;gap:44px;margin-top:44px}
+.hero-stats div strong{display:block;font-family:var(--font-titre);font-size:1.9rem;color:var(--or-clair)}
+.hero-stats div span{font-size:.85rem;opacity:.8}
+
+/* ---------- Cartes biens ---------- */
+.grille-biens{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+.carte-bien{background:#fff;border-radius:var(--rayon);overflow:hidden;box-shadow:var(--ombre);transition:.3s;border:1px solid var(--bord)}
+.carte-bien:hover{transform:translateY(-6px)}
+.carte-img{position:relative;height:240px;overflow:hidden}
+.carte-img img{width:100%;height:100%;object-fit:cover;transition:.5s}
+.carte-bien:hover .carte-img img{transform:scale(1.06)}
+.badge{position:absolute;top:14px;left:14px;background:var(--or);color:#1c1c1c;font-size:.75rem;font-weight:700;
+  padding:6px 14px;border-radius:999px;text-transform:uppercase;letter-spacing:.08em}
+.badge--location{background:var(--vert);color:#fff}
+.carte-corps{padding:24px}
+.carte-corps h3{font-size:1.25rem;margin-bottom:6px}
+.carte-lieu{color:var(--gris);font-size:.88rem;margin-bottom:12px}
+.carte-prix{font-family:var(--font-titre);font-size:1.45rem;color:var(--vert);margin-bottom:14px}
+.carte-prix small{font-family:var(--font-texte);font-size:.8rem;color:var(--gris);font-weight:400}
+.carte-specs{display:flex;gap:16px;font-size:.85rem;color:var(--gris);border-top:1px solid var(--bord);padding-top:14px}
+.carte-specs b{color:var(--encre)}
+.centre{text-align:center;margin-top:44px}
+
+/* ---------- Services ---------- */
+.grille-services{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.service{background:#fff;border:1px solid var(--bord);border-radius:var(--rayon);padding:34px 26px;transition:.3s}
+.service:hover{box-shadow:var(--ombre);transform:translateY(-4px);border-color:var(--or)}
+.service-icone{width:56px;height:56px;border-radius:16px;background:var(--vert);color:var(--or-clair);
+  display:flex;align-items:center;justify-content:center;font-size:1.5rem;margin-bottom:18px}
+.service h3{font-size:1.15rem;margin-bottom:10px}
+.service p{font-size:.92rem;color:var(--gris)}
+
+/* ---------- Bandeau CTA ---------- */
+.bandeau{background:linear-gradient(120deg,var(--vert),var(--vert-2));color:#fff;border-radius:22px;
+  padding:56px;display:flex;align-items:center;justify-content:space-between;gap:32px;flex-wrap:wrap}
+.bandeau h2{color:#fff;font-size:clamp(1.5rem,3vw,2.2rem);margin-bottom:10px}
+.bandeau p{opacity:.85;max-width:520px}
+
+/* ---------- Filtres catalogue ---------- */
+.filtres{background:#fff;border:1px solid var(--bord);border-radius:var(--rayon);padding:20px;
+  display:grid;grid-template-columns:repeat(4,1fr) auto;gap:12px;margin-bottom:36px;box-shadow:var(--ombre);align-items:end}
+.filtres label{font-size:.78rem;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:var(--gris);display:block;margin-bottom:6px}
+.filtres select{width:100%;padding:12px;border:1px solid var(--bord);border-radius:10px;font-size:.92rem;background:#fff}
+.resultat-compte{color:var(--gris);margin-bottom:20px;font-size:.92rem}
+.vide{text-align:center;padding:60px;color:var(--gris);grid-column:1/-1}
+
+/* ---------- Page détail ---------- */
+.page-hero{background:linear-gradient(rgba(10,25,20,.72),rgba(10,25,20,.55)),url('images/hero-villa.jpg') center/cover;
+  padding:150px 0 70px;color:#fff}
+.page-hero h1{color:#fff;font-size:clamp(2rem,4.5vw,3.2rem)}
+.fil-ariane{font-size:.85rem;opacity:.8;margin-bottom:14px}
+.detail-grille{display:grid;grid-template-columns:1.6fr 1fr;gap:40px;padding:60px 0}
+.detail-img{border-radius:var(--rayon);overflow:hidden;box-shadow:var(--ombre);height:480px}
+.detail-img img{width:100%;height:100%;object-fit:cover}
+.detail-infos h2{font-size:1.8rem;margin-bottom:8px}
+.detail-prix{font-family:var(--font-titre);font-size:2rem;color:var(--vert);margin:14px 0 22px}
+.liste-specs{list-style:none;margin:22px 0;display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.liste-specs li{background:var(--creme);border-radius:10px;padding:12px 16px;font-size:.92rem}
+.liste-specs li b{display:block;font-size:.75rem;text-transform:uppercase;letter-spacing:.06em;color:var(--gris)}
+.encadre{background:var(--creme);border-radius:var(--rayon);padding:30px;position:sticky;top:110px}
+.encadre h3{margin-bottom:14px}
+.encadre .tel{font-size:1.3rem;font-weight:700;color:var(--vert);margin:10px 0 18px;display:block}
+
+/* ---------- Formulaires ---------- */
+.formulaire label{display:block;font-size:.85rem;font-weight:600;margin:14px 0 6px}
+.formulaire input,.formulaire select,.formulaire textarea{width:100%;padding:13px 15px;border:1.5px solid var(--bord);
+  border-radius:10px;font-size:.95rem;font-family:var(--font-texte);outline:none;transition:.2s;background:#fff}
+.formulaire input:focus,.formulaire select:focus,.formulaire textarea:focus{border-color:var(--or)}
+.formulaire textarea{min-height:120px;resize:vertical}
+.form-ok{display:none;background:#e9f7ef;border:1px solid #9ed9b4;color:#1d6b3c;border-radius:10px;padding:16px;margin-top:16px}
+.contact-grille{display:grid;grid-template-columns:1fr 1fr;gap:48px;padding:60px 0;align-items:start}
+.carte-adresse{background:var(--vert);color:#fff;border-radius:var(--rayon);padding:36px}
+.carte-adresse h3{color:#fff;margin-bottom:16px}
+.carte-adresse p{opacity:.88;margin-bottom:10px;font-size:.95rem}
+
+/* ---------- Footer ---------- */
+footer{background:var(--vert);color:#fff;padding:64px 0 0;margin-top:0}
+.footer-grille{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:36px;padding-bottom:44px}
+.footer-grille h4{color:var(--or-clair);margin-bottom:16px;font-size:.95rem;text-transform:uppercase;letter-spacing:.08em}
+.footer-grille a{display:block;opacity:.8;margin-bottom:10px;font-size:.92rem}
+.footer-grille a:hover{opacity:1;color:var(--or-clair)}
+.footer-logo{font-family:var(--font-titre);font-size:1.6rem;margin-bottom:14px}
+.footer-logo span{color:var(--or)}
+.footer-bas{border-top:1px solid rgba(255,255,255,.14);padding:20px 0;display:flex;justify-content:space-between;
+  gap:12px;flex-wrap:wrap;font-size:.82rem;opacity:.75}
+
+/* ---------- Divers ---------- */
+.whatsapp-float{position:fixed;right:22px;bottom:22px;z-index:60;width:58px;height:58px;border-radius:50%;
+  background:#25d366;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 30px rgba(0,0,0,.25);transition:.25s}
+.whatsapp-float:hover{transform:scale(1.1)}
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .7s,transform .7s}
+.reveal.visible{opacity:1;transform:none}
+
+/* ---------- Responsive ---------- */
+@media(max-width:1024px){
+  .grille-biens{grid-template-columns:repeat(2,1fr)}
+  .grille-services{grid-template-columns:repeat(2,1fr)}
+  .recherche{grid-template-columns:1fr 1fr}
+  .recherche .champ{border-right:none;border-bottom:1px solid var(--bord)}
+  .filtres{grid-template-columns:1fr 1fr}
+  .detail-grille,.contact-grille{grid-template-columns:1fr}
+  .footer-grille{grid-template-columns:1fr 1fr}
+}
+@media(max-width:768px){
+  .nav{position:fixed;inset:0 0 0 auto;width:min(320px,84vw);background:var(--vert);flex-direction:column;
+    align-items:flex-start;padding:100px 36px;gap:26px;transform:translateX(100%);transition:.35s}
+  .nav.ouvert{transform:none}
+  .nav a{color:#fff!important;font-size:1.1rem}
+  .burger{display:flex;z-index:60}
+  .burger.ouvert span:nth-child(1){transform:translateY(7.5px) rotate(45deg)}
+  .burger.ouvert span:nth-child(2){opacity:0}
+  .burger.ouvert span:nth-child(3){transform:translateY(-7.5px) rotate(-45deg)}
+  .header-cta .btn{display:none}
+  .grille-biens{grid-template-columns:1fr}
+  .recherche{grid-template-columns:1fr}
+  .hero-stats{flex-wrap:wrap;gap:24px}
+  .bandeau{padding:36px 28px}
+  .filtres{grid-template-columns:1fr}
+  .liste-specs{grid-template-columns:1fr}
+  .section{padding:60px 0}
+}
