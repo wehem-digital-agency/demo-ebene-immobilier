@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ébène Immobilier — Votre adresse de confiance à Libreville</title>
+<meta name="description" content="Ébène Immobilier : achat, vente et location de biens immobiliers à Libreville, Gabon. Villas, appartements, studios.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="header" id="header">
+  <div class="container">
+    <a href="index.html" class="logo">ÉBÈNE<span> Immobilier</span></a>
+    <nav class="nav" id="nav">
+      <a href="index.html">Accueil</a>
+      <a href="biens.html">Nos biens</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="header-cta">
+      <a class="btn btn--or" href="https://wa.me/24107000000" target="_blank" rel="noopener">WhatsApp</a>
+      <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container hero-contenu">
+    <h1>Trouvez votre adresse<br><em>à Libreville</em></h1>
+    <p>Ébène Immobilier vous accompagne dans l'achat, la vente et la location de villas,
+       appartements et studios dans les plus beaux quartiers de la capitale gabonaise.</p>
+    <form class="recherche" action="biens.html" method="get">
+      <div class="champ">
+        <select name="transaction" aria-label="Transaction">
+          <option value="">Achat / Location</option>
+          <option value="vente">Achat</option>
+          <option value="location">Location</option>
+        </select>
+      </div>
+      <div class="champ">
+        <select name="type" aria-label="Type de bien">
+          <option value="">Type de bien</option>
+          <option value="villa">Villa</option>
+          <option value="appartement">Appartement</option>
+          <option value="studio">Studio</option>
+          <option value="duplex">Duplex</option>
+        </select>
+      </div>
+      <div class="champ">
+        <select name="quartier" aria-label="Quartier">
+          <option value="">Quartier</option>
+          <option value="louis">Louis</option>
+          <option value="glass">Glass</option>
+          <option value="angondjé">Angondjé</option>
+          <option value="alibandeng">Alibandeng</option>
+          <option value="centre-ville">Centre-ville</option>
+        </select>
+      </div>
+      <div class="champ">
+        <select name="budget" aria-label="Budget max">
+          <option value="">Budget max</option>
+          <option value="300000">300 000 FCFA / mois</option>
+          <option value="600000">600 000 FCFA / mois</option>
+          <option value="1500000">1 500 000 FCFA / mois</option>
+          <option value="70000000">70 000 000 FCFA (achat)</option>
+          <option value="100000000">100 000 000 FCFA (achat)</option>
+        </select>
+      </div>
+      <button class="btn btn--or" type="submit">Rechercher</button>
+    </form>
+    <div class="hero-stats">
+      <div><strong>120+</strong><span>biens au catalogue</span></div>
+      <div><strong>15 ans</strong><span>d'expérience locale</span></div>
+      <div><strong>98 %</strong><span>de clients satisfaits</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <span class="kicker reveal">Sélection du moment</span>
+    <h2 class="titre-section reveal">Nos biens à la une</h2>
+    <p class="sous-titre reveal">Une sélection de villas et d'appartements vérifiés par notre équipe, à Libreville.</p>
+    <div class="grille-biens">
+      <article class="carte-bien reveal">
+        <a href="bien.html"><div class="carte-img">
+          <img src="images/villa-emeraude.jpg" alt="Villa Émeraude" loading="lazy">
+          <span class="badge">Vente</span>
+        </div></a>
+        <div class="carte-corps">
+          <h3><a href="bien.html">Villa Émeraude</a></h3>
+          <p class="carte-lieu">Louis, Libreville</p>
+          <p class="carte-prix">85 000 000 FCFA</p>
+          <div class="carte-specs"><span><b>5</b> ch.</span><span><b>4</b> sdb</span><span><b>450 m²</b></span></div>
+        </div>
+      </article>
+      <article class="carte-bien reveal">
+        <a href="contact.html"><div class="carte-img">
+          <img src="images/appart-manguiers.jpg" alt="Appartement Les Manguiers" loading="lazy">
+          <span class="badge badge--location">Location</span>
+        </div></a>
+        <div class="carte-corps">
+          <h3><a href="contact.html">Appartement Les Manguiers</a></h3>
+          <p class="carte-lieu">Glass, Libreville</p>
+          <p class="carte-prix">450 000 FCFA <small>/ mois</small></p>
+          <div class="carte-specs"><span><b>3</b> ch.</span><span><b>2</b> sdb</span><span><b>120 m²</b></span></div>
+        </div>
+      </article>
+      <article class="carte-bien reveal">
+        <a href="contact.html"><div class="carte-img">
+          <img src="images/villa-hibiscus.jpg" alt="Villa Hibiscus" loading="lazy">
+          <span class="badge badge--location">Location</span>
+        </div></a>
+        <div class="carte-corps">
+          <h3><a href="contact.html">Villa Hibiscus</a></h3>
+          <p class="carte-lieu">Angondjé, Libreville</p>
+          <p class="carte-prix">1 200 000 FCFA <small>/ mois</small></p>
+          <div class="carte-specs"><span><b>4</b> ch.</span><span><b>3</b> sdb</span><span><b>380 m²</b></span></div>
+        </div>
+      </article>
+    </div>
+    <div class="centre reveal"><a class="btn btn--vert" href="biens.html">Voir tous nos biens</a></div>
+  </div>
+</section>
+
+<section class="section section--creme">
+  <div class="container">
+    <span class="kicker reveal">Nos services</span>
+    <h2 class="titre-section reveal">Un accompagnement complet</h2>
+    <p class="sous-titre reveal">De la première visite à la signature, une équipe locale à vos côtés.</p>
+    <div class="grille-services">
+      <div class="service reveal">
+        <div class="service-icone">⌂</div>
+        <h3>Achat &amp; Vente</h3>
+        <p>Estimation juste, dossier juridique vérifié et négociation accompagnée jusqu'à la signature chez le notaire.</p>
+      </div>
+      <div class="service reveal">
+        <div class="service-icone">◈</div>
+        <h3>Location</h3>
+        <p>Sélection de biens vérifiés, visites organisées et bail sécurisé pour locataires et propriétaires.</p>
+      </div>
+      <div class="service reveal">
+        <div class="service-icone">✦</div>
+        <h3>Gestion locative</h3>
+        <p>Nous gérons votre bien comme le nôtre : loyers, entretien, locataires. Vous touchez vos revenus sereinement.</p>
+      </div>
+      <div class="service reveal">
+        <div class="service-icone">◎</div>
+        <h3>Estimation gratuite</h3>
+        <p>Vous vendez ? Recevez une estimation réaliste de votre bien sous 48 h, sans engagement.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="bandeau reveal">
+      <div>
+        <h2>Un projet immobilier ? Parlons-en.</h2>
+        <p>Estimation gratuite, visite ou simple conseil : notre équipe vous répond sous 24 h ouvrées.</p>
+      </div>
+      <a class="btn btn--or" href="contact.html">Nous contacter</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grille">
+      <div>
+        <p class="footer-logo">ÉBÈNE<span> Immobilier</span></p>
+        <p style="opacity:.8;font-size:.92rem">Votre adresse de confiance à Libreville : achat, vente, location et gestion de biens d'exception au Gabon.</p>
+      </div>
+      <div>
+        <h4>Navigation</h4>
+        <a href="index.html">Accueil</a>
+        <a href="biens.html">Nos biens</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <a href="contact.html">Achat &amp; vente</a>
+        <a href="contact.html">Location</a>
+        <a href="contact.html">Gestion locative</a>
+        <a href="contact.html">Estimation gratuite</a>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <a href="tel:+24107000000">+241 07 00 00 00</a>
+        <a href="mailto:contact@ebene-immobilier.ga">contact@ebene-immobilier.ga</a>
+        <a href="contact.html">Quartier Louis, Libreville</a>
+      </div>
+    </div>
+    <div class="footer-bas">
+      <span>© <span id="annee"></span> Ébène Immobilier — Tous droits réservés.</span>
+      <span>Site de démonstration conçu par <a href="https://wehem-agency.github.io/" style="display:inline">WEHEM Digital Agency</a></span>
+    </div>
+  </div>
+</footer>
+
+<a class="whatsapp-float" href="https://wa.me/24107000000" target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg width="30" height="30" viewBox="0 0 24 24" fill="#fff"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.4 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.4-.7-2.9-1.2-4.7-4.1-4.9-4.3-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 1.9.8 2c.1.1.1.3 0 .5-.3.6-.6.8-.4 1.1.7 1.2 1.6 2 2.8 2.6.3.2.5.1.7-.1l.8-.9c.2-.3.4-.2.7-.1l2 1c.3.1.5.2.6.4 0 .1 0 .5-.2 1.3z"/></svg>
+</a>
+
+<script src="app.js"></script>
+</body>
+</html>
