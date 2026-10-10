@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact — Ébène Immobilier, Libreville</title>
+<meta name="description" content="Contactez Ébène Immobilier : estimation gratuite, visite, recherche personnalisée à Libreville, Gabon.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="header" id="header">
+  <div class="container">
+    <a href="index.html" class="logo">ÉBÈNE<span> Immobilier</span></a>
+    <nav class="nav" id="nav">
+      <a href="index.html">Accueil</a>
+      <a href="biens.html">Nos biens</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="header-cta">
+      <a class="btn btn--or" href="https://wa.me/24107000000" target="_blank" rel="noopener">WhatsApp</a>
+      <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<section class="page-hero">
+  <div class="container">
+    <p class="fil-ariane">Accueil / Contact</p>
+    <h1>Parlons de votre projet</h1>
+    <p style="opacity:.85;max-width:600px">Estimation, visite, recherche sur mesure : écrivez-nous, nous répondons sous 24 h ouvrées.</p>
+  </div>
+</section>
+
+<div class="container">
+  <div class="contact-grille">
+    <div class="reveal">
+      <form class="formulaire" data-demo>
+        <label for="c-nom">Votre nom *</label>
+        <input id="c-nom" type="text" required placeholder="Votre nom complet">
+        <label for="c-tel">Téléphone / WhatsApp *</label>
+        <input id="c-tel" type="tel" required placeholder="+241 …">
+        <label for="c-email">E-mail</label>
+        <input id="c-email" type="email" placeholder="vous@exemple.com">
+        <label for="c-sujet">Votre demande</label>
+        <select id="c-sujet">
+          <option>Je cherche à acheter</option>
+          <option>Je cherche à louer</option>
+          <option>Je veux vendre mon bien</option>
+          <option>Gestion locative</option>
+          <option>Estimation gratuite</option>
+          <option>Autre demande</option>
+        </select>
+        <label for="c-msg">Votre message *</label>
+        <textarea id="c-msg" required placeholder="Décrivez votre projet : budget, quartier, surface…"></textarea>
+        <button class="btn btn--vert" type="submit" style="margin-top:20px">Envoyer ma demande</button>
+        <p class="form-ok">✓ Message envoyé ! Notre équipe vous répondra sous 24 h ouvrées.</p>
+      </form>
+    </div>
+    <div>
+      <div class="carte-adresse reveal">
+        <h3>Nos coordonnées</h3>
+        <p>📍 Quartier Louis, Libreville — Gabon</p>
+        <p>📞 <a href="tel:+24107000000">+241 07 00 00 00</a></p>
+        <p>✉️ <a href="mailto:contact@ebene-immobilier.ga">contact@ebene-immobilier.ga</a></p>
+        <p>🕘 Lun – Sam · 8h30 – 18h00</p>
+        <a class="btn btn--or" href="https://wa.me/24107000000" target="_blank" rel="noopener" style="margin-top:18px">Discuter sur WhatsApp</a>
+      </div>
+      <div class="reveal" style="margin-top:24px;background:var(--creme);border-radius:var(--rayon);padding:28px">
+        <h3 style="font-size:1.1rem;margin-bottom:10px">Estimation gratuite</h3>
+        <p style="font-size:.92rem;color:var(--gris)">Vous vendez un bien ? Recevez une estimation réaliste sous 48 h, sans engagement.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="container">
+    <div class="footer-grille">
+      <div>
+        <p class="footer-logo">ÉBÈNE<span> Immobilier</span></p>
+        <p style="opacity:.8;font-size:.92rem">Votre adresse de confiance à Libreville : achat, vente, location et gestion de biens d'exception au Gabon.</p>
+      </div>
+      <div>
+        <h4>Navigation</h4>
+        <a href="index.html">Accueil</a>
+        <a href="biens.html">Nos biens</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <a href="contact.html">Achat &amp; vente</a>
+        <a href="contact.html">Location</a>
+        <a href="contact.html">Gestion locative</a>
+        <a href="contact.html">Estimation gratuite</a>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <a href="tel:+24107000000">+241 07 00 00 00</a>
+        <a href="mailto:contact@ebene-immobilier.ga">contact@ebene-immobilier.ga</a>
+        <a href="contact.html">Quartier Louis, Libreville</a>
+      </div>
+    </div>
+    <div class="footer-bas">
+      <span>© <span id="annee"></span> Ébène Immobilier — Tous droits réservés.</span>
+      <span>Site de démonstration conçu par <a href="https://wehem-agency.github.io/" style="display:inline">WEHEM Digital Agency</a></span>
+    </div>
+  </div>
+</footer>
+
+<a class="whatsapp-float" href="https://wa.me/24107000000" target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg width="30" height="30" viewBox="0 0 24 24" fill="#fff"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.4 14.1c-.2.6-1.3 1.2-1.8 1.2-.5.1-1 .2-3.4-.7-2.9-1.2-4.7-4.1-4.9-4.3-.1-.2-1.1-1.5-1.1-2.9s.7-2 1-2.3c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5s.8 1.9.8 2c.1.1.1.3 0 .5-.3.6-.6.8-.4 1.1.7 1.2 1.6 2 2.8 2.6.3.2.5.1.7-.1l.8-.9c.2-.3.4-.2.7-.1l2 1c.3.1.5.2.6.4 0 .1 0 .5-.2 1.3z"/></svg>
+</a>
+
+<script src="app.js"></script>
+</body>
+</html>
